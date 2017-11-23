@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\HRTemp\2017各台问题汇总\河南省台\打包\UserSynchroWebService" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="bin/SynchroCommon.pdb" publishTime="08/11/2017 11:03:08" />
+    <file relUrl="Web.config" publishTime="08/11/2017 11:03:24" />
+    <file relUrl="bin/UserSynchroWebService.dll" publishTime="08/11/2017 11:03:08" />
+    <file relUrl="bin/UserSynchroWebService.pdb" publishTime="08/11/2017 11:03:08" />
+    <file relUrl="bin/SynchroCommon.dll" publishTime="08/11/2017 11:03:08" />
+    <file relUrl="UserSynchroWebService.asmx" publishTime="06/28/2017 16:31:12" />
+  </publishProfile>
+</publishData>

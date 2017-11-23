@@ -1,0 +1,4 @@
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\SynchroCommon\bin\Release\SynchroCommon.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\SynchroCommon\bin\Release\SynchroCommon.pdb
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\SynchroCommon\obj\Release\SynchroCommon.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\SynchroCommon\obj\Release\SynchroCommon.pdb

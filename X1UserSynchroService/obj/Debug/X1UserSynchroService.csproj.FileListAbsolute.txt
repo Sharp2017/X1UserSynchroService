@@ -1,0 +1,16 @@
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\X1UserSynchroService.exe.config
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\X1UserSynchroService.exe.manifest
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\X1UserSynchroService.application
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\X1UserSynchroService.exe
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\X1UserSynchroService.pdb
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\RightManagerDll.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\SynchroCommon.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\bin\Debug\SynchroCommon.pdb
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.csprojResolveAssemblyReference.cache
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.FrmMain.resources
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.Properties.Resources.resources
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.csproj.GenerateResource.Cache
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.exe.manifest
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.application
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.exe
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\X1UserSynchroService\obj\Debug\X1UserSynchroService.pdb

@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gender" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tag1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tag2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tag3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Certificate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForceCard" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="JobStatus" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICNumber1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICNumber2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ICNumber3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fingerprint" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyAddr" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HomeAddr" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastLoginDateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateUserID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyUserID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyDateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserFingerInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserFingerInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserFingerInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="FingerInfoStr1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FingerInfoStr2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FingerInfoStr3" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserFingerInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserFingerInfoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserFingerInfoByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserFingerInfoByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserFingerInfoByIDResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserGroups">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="SystemID" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Category" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SysRelNumber" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreateUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateUserID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CreateDateTime" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifyUserName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyUserID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModifyDateTime" nillable="true" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserGroupsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserGroupsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGroupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserGroup2User">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserGroup2User" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserGroup2User">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserGroupID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserGroup2UserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserGroup2UserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroup2User">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userGroup2UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroup2UserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserGroup2UserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserGroup2UserGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserGroup2UserGroup" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserGroup2UserGroup">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="SuperiorID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="LowerID" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserGroup2UserGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserGroup2UserGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroup2UserGroup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserGroup2UserGroupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserGroup2UserGroupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserGroup2UserGroupResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserLogin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserLogin">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="LoginTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComputerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserLogin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserLoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserLoginResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserLoginEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ur" type="tns:UserLoginEx" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserLoginEx">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginEx1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginEx2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginEx3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginEx4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserLoginEx5" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserLoginExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserLoginExResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserLoginExList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUserLoginExList" type="tns:ArrayOfUserLoginEx" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUserLoginEx">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UserLoginEx" nillable="true" type="tns:UserLoginEx" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateUserLoginExListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateUserLoginExListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserLoginEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userLoginName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteUserLoginExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteUserLoginExResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserByID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserFingerInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserFingerInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserFingerInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserFingerInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserFingerInfoByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserFingerInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserFingerInfoByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserFingerInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroupsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroups" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroupsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroup2UserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroup2User" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroup2UserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroup2UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroup2UserSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup2User" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroup2UserSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup2UserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroup2UserGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroup2UserGroup" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserGroup2UserGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserGroup2UserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroup2UserGroupSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup2UserGroup" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserGroup2UserGroupSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserGroup2UserGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserLoginSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserLoginSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginExSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserLoginEx" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginExSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserLoginExResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginExListSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserLoginExList" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserLoginExListSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserLoginExListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserLoginExSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteUserLoginEx" />
+  </wsdl:message>
+  <wsdl:message name="DeleteUserLoginExSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteUserLoginExResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UserSynchroWebServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input message="tns:UpdateUserSoapIn" />
+      <wsdl:output message="tns:UpdateUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByID">
+      <wsdl:input message="tns:DeleteUserByIDSoapIn" />
+      <wsdl:output message="tns:DeleteUserByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserFingerInfo">
+      <wsdl:input message="tns:UpdateUserFingerInfoSoapIn" />
+      <wsdl:output message="tns:UpdateUserFingerInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserFingerInfoByID">
+      <wsdl:input message="tns:DeleteUserFingerInfoByIDSoapIn" />
+      <wsdl:output message="tns:DeleteUserFingerInfoByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroups">
+      <wsdl:input message="tns:UpdateUserGroupsSoapIn" />
+      <wsdl:output message="tns:UpdateUserGroupsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <wsdl:input message="tns:DeleteUserGroupSoapIn" />
+      <wsdl:output message="tns:DeleteUserGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2User">
+      <wsdl:input message="tns:UpdateUserGroup2UserSoapIn" />
+      <wsdl:output message="tns:UpdateUserGroup2UserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2User">
+      <wsdl:input message="tns:DeleteUserGroup2UserSoapIn" />
+      <wsdl:output message="tns:DeleteUserGroup2UserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2UserGroup">
+      <wsdl:input message="tns:UpdateUserGroup2UserGroupSoapIn" />
+      <wsdl:output message="tns:UpdateUserGroup2UserGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2UserGroup">
+      <wsdl:input message="tns:DeleteUserGroup2UserGroupSoapIn" />
+      <wsdl:output message="tns:DeleteUserGroup2UserGroupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLogin">
+      <wsdl:input message="tns:UpdateUserLoginSoapIn" />
+      <wsdl:output message="tns:UpdateUserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLogin">
+      <wsdl:input message="tns:DeleteUserLoginSoapIn" />
+      <wsdl:output message="tns:DeleteUserLoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginEx">
+      <wsdl:input message="tns:UpdateUserLoginExSoapIn" />
+      <wsdl:output message="tns:UpdateUserLoginExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginExList">
+      <wsdl:input message="tns:UpdateUserLoginExListSoapIn" />
+      <wsdl:output message="tns:UpdateUserLoginExListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLoginEx">
+      <wsdl:input message="tns:DeleteUserLoginExSoapIn" />
+      <wsdl:output message="tns:DeleteUserLoginExSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserSynchroWebServiceSoap" type="tns:UserSynchroWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByID">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserFingerInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserFingerInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserFingerInfoByID">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserFingerInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroups">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserGroups" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2User">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserGroup2User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2User">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserGroup2User" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2UserGroup">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserGroup2UserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2UserGroup">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserGroup2UserGroup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLogin">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLogin">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginEx">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserLoginEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginExList">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserLoginExList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLoginEx">
+      <soap:operation soapAction="http://tempuri.org/DeleteUserLoginEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserSynchroWebServiceSoap12" type="tns:UserSynchroWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserByID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserFingerInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserFingerInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserFingerInfoByID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserFingerInfoByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroups">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2User">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserGroup2User" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2User">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserGroup2User" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserGroup2UserGroup">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserGroup2UserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserGroup2UserGroup">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserGroup2UserGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLogin">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLogin">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginEx">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserLoginEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserLoginExList">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserLoginExList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUserLoginEx">
+      <soap12:operation soapAction="http://tempuri.org/DeleteUserLoginEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserSynchroWebService">
+    <wsdl:port name="UserSynchroWebServiceSoap" binding="tns:UserSynchroWebServiceSoap">
+      <soap:address location="http://localhost:21768/UserSynchroWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserSynchroWebServiceSoap12" binding="tns:UserSynchroWebServiceSoap12">
+      <soap12:address location="http://localhost:21768/UserSynchroWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\bin\UserSynchroWebService.dll.config
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\bin\UserSynchroWebService.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\bin\UserSynchroWebService.pdb
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\bin\SynchroCommon.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\bin\SynchroCommon.pdb
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\obj\Release\UserSynchroWebService.csprojResolveAssemblyReference.cache
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\obj\Release\UserSynchroWebService.dll
+D:\HRTemp\2017各台问题汇总\河南省台\Code\X1UserSynchroService\UserSynchroWebService\obj\Release\UserSynchroWebService.pdb
